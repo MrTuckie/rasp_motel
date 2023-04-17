@@ -1,0 +1,86 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+	<title>Caça Niquel do Amor</title>
+	<link rel="shortcut icon" href="favicon.png" type="image/png">
+    
+    <!-- Styles -->
+	<link rel="stylesheet" type="text/css" href="_assets/css/yc-slot-machine.css">
+</head>
+
+<body>
+
+	<div id="ycslotmachine">
+		
+		<input type="hidden" value="1" id="YCplay" />
+		
+		<!-- LIGHTS -->
+		<div id="left_light" class="side_light">
+			<img src="_assets/img/light-a.png" />
+			<img src="_assets/img/light-b.png" class="no-display" />
+		</div>
+		<div id="right_light" class="side_light">
+			<img src="_assets/img/light-a.png" />
+			<img src="_assets/img/light-b.png" class="no-display" />
+		</div>
+		<!-- /END LIGHTS -->
+
+		<div class="star" id="st_izq"></div>
+		<div class="star" id="st_der"></div>
+
+		<!-- / -->
+		<div id="YCSM-roulette">
+			<div id="board-1" class="board"></div>
+			<div id="board-2" class="board"></div>
+			<div id="board-3" class="board"></div>
+
+			<div id="YCSM-list-1" class="prize-list"><div id="index-1"></div></div>
+			<div id="YCSM-list-2" class="prize-list"><div id="index-2"></div></div>
+			<div id="YCSM-list-3" class="prize-list"><div id="index-3"></div></div>
+		</div>
+	</div>
+
+	<!--div id="YCSM-buttons"></div-->
+	
+	<!-- AUDIO -->	
+	<audio id="YCSM-game" preload="auto">
+		<source src="_assets/audio/play.mp3">
+	  	Your browser does not support the audio element.
+	</audio>
+	
+	<audio id="YCSM-win" preload="auto">
+		<source src="_assets/audio/win.mp3">
+	  	Your browser does not support the audio element.
+	</audio>
+	
+	<audio id="YCSM-lose" preload="auto">
+		<source src="_assets/audio/lose.mp3">
+	  	Your browser does not support the audio element.
+	</audio>
+	
+	<div id="modal_background">
+
+		<div id="YCSM-modal" class="modal_window">
+			<div id="YCSM-message" class="modal-contener">
+				<img src="_assets/img/loser.png">
+				<button id="tryagain">Try Again!</button>
+			</div>
+		</div>
+	
+    </div>
+	
+	<!-- YCSM SCRIPTS -->
+	<script src="_assets/js/jquery.min.js"></script>
+	<script src="_assets/js/jquery.easing.min.js"></script>
+	<script src="_assets/js/slotmachine.js"></script>
+	<script src="_assets/js/fx.js"></script>
+	
+	<script>		
+		$('#ycslotmachine').YCSlotMachine();
+	</script>
+
+</body>
+
+<!-- Mirrored from majesticapp.store/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 28 Apr 2019 16:37:22 GMT -->
+</html>

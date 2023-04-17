@@ -1,0 +1,174 @@
+2021-06-26 14:56:53.603 | ERROR    | sinric._sinricpro:__init__:36 - Device Id verification failed
+2021-06-26 15:15:49.841 | SUCCESS  | sinric._sinricprosocket:connect:41 - Connected :)
+2021-06-26 15:15:49.853 | SUCCESS  | sinric._sinricprosocket:connect:46 - Timestamp is in sync :)
+2021-06-26 15:19:21.882 | ERROR    | sinric._sinricpro:handle_all:73 - Keyboard Interrupt
+2021-06-26 15:19:24.031 | SUCCESS  | sinric._sinricprosocket:connect:41 - Connected :)
+2021-06-26 15:19:24.042 | SUCCESS  | sinric._sinricprosocket:connect:46 - Timestamp is in sync :)
+2021-06-26 15:21:49.465 | ERROR    | sinric._sinricpro:handle_all:73 - Keyboard Interrupt
+2021-06-26 15:21:51.653 | SUCCESS  | sinric._sinricprosocket:connect:41 - Connected :)
+2021-06-26 15:21:51.676 | SUCCESS  | sinric._sinricprosocket:connect:46 - Timestamp is in sync :)
+2021-06-26 15:26:06.108 | ERROR    | sinric._sinricpro:handle_all:73 - Keyboard Interrupt
+2021-06-26 15:26:07.931 | SUCCESS  | sinric._sinricprosocket:connect:41 - Connected :)
+2021-06-26 15:26:07.944 | SUCCESS  | sinric._sinricprosocket:connect:46 - Timestamp is in sync :)
+2021-06-26 15:28:49.315 | ERROR    | sinric._sinricpro:handle_all:73 - Keyboard Interrupt
+2021-06-26 15:28:51.328 | SUCCESS  | sinric._sinricprosocket:connect:41 - Connected :)
+2021-06-26 15:28:51.339 | SUCCESS  | sinric._sinricprosocket:connect:46 - Timestamp is in sync :)
+2021-06-26 15:30:28.938 | ERROR    | sinric._sinricpro:handle_all:73 - Keyboard Interrupt
+2021-06-26 15:30:30.899 | SUCCESS  | sinric._sinricprosocket:connect:41 - Connected :)
+2021-06-26 15:30:30.919 | SUCCESS  | sinric._sinricprosocket:connect:46 - Timestamp is in sync :)
+2021-06-26 15:31:04.149 | ERROR    | sinric._sinricpro:handle_all:73 - Keyboard Interrupt
+2021-06-26 15:31:06.057 | SUCCESS  | sinric._sinricprosocket:connect:41 - Connected :)
+2021-06-26 15:31:06.068 | SUCCESS  | sinric._sinricprosocket:connect:46 - Timestamp is in sync :)
+2021-06-26 15:33:29.312 | ERROR    | sinric._sinricpro:handle_all:73 - Keyboard Interrupt
+2021-06-26 15:33:31.181 | SUCCESS  | sinric._sinricprosocket:connect:41 - Connected :)
+2021-06-26 15:33:31.206 | SUCCESS  | sinric._sinricprosocket:connect:46 - Timestamp is in sync :)
+2021-06-26 15:34:02.759 | ERROR    | sinric._cbhandler:handleCallBacks:142 - Error : unsupported operand type(s) for /: 'NoneType' and 'int'
+2021-06-26 15:34:20.613 | ERROR    | sinric._sinricpro:handle_all:73 - Keyboard Interrupt
+2021-06-26 15:34:23.329 | SUCCESS  | sinric._sinricprosocket:connect:41 - Connected :)
+2021-06-26 15:34:23.348 | SUCCESS  | sinric._sinricprosocket:connect:46 - Timestamp is in sync :)
+2021-06-26 15:35:31.065 | ERROR    | sinric._sinricpro:handle_all:73 - Keyboard Interrupt
+2021-06-26 15:35:32.939 | SUCCESS  | sinric._sinricprosocket:connect:41 - Connected :)
+2021-06-26 15:35:32.950 | SUCCESS  | sinric._sinricprosocket:connect:46 - Timestamp is in sync :)
+2021-06-26 15:36:05.256 | ERROR    | sinric._sinricpro:handle_all:73 - Keyboard Interrupt
+2021-06-26 15:36:07.197 | SUCCESS  | sinric._sinricprosocket:connect:41 - Connected :)
+2021-06-26 15:36:07.207 | SUCCESS  | sinric._sinricprosocket:connect:46 - Timestamp is in sync :)
+2021-06-26 15:36:13.677 | ERROR    | sinric._cbhandler:handleCallBacks:142 - Error : unsupported operand type(s) for /: 'NoneType' and 'int'
+2021-07-20 14:55:39.545 | INFO     | sinric._sinricprosocket:receiveMessage:58 - Connection with server closed
+2021-07-20 14:55:39.636 | ERROR    | sinric._sinricprosocket:receiveMessage:59 - code = 1006 (connection closed abnormally [internal]), no reason
+Traceback (most recent call last):
+
+  File "/usr/local/lib/python3.7/dist-packages/websockets/legacy/protocol.py", line 750, in transfer_data
+    message = await self.read_message()
+                    │    └ <function WebSocketCommonProtocol.read_message at 0x75e5a9c0>
+                    └ <websockets.legacy.client.WebSocketClientProtocol object at 0x75e5dd10>
+
+  File "/usr/local/lib/python3.7/dist-packages/websockets/legacy/protocol.py", line 819, in read_message
+    frame = await self.read_data_frame(max_size=self.max_size)
+                  │    │                        │    └ 1048576
+                  │    │                        └ <websockets.legacy.client.WebSocketClientProtocol object at 0x75e5dd10>
+                  │    └ <function WebSocketCommonProtocol.read_data_frame at 0x75e5aa08>
+                  └ <websockets.legacy.client.WebSocketClientProtocol object at 0x75e5dd10>
+
+  File "/usr/local/lib/python3.7/dist-packages/websockets/legacy/protocol.py", line 895, in read_data_frame
+    frame = await self.read_frame(max_size)
+                  │    │          └ 1048576
+                  │    └ <function WebSocketCommonProtocol.read_frame at 0x75e5aa50>
+                  └ <websockets.legacy.client.WebSocketClientProtocol object at 0x75e5dd10>
+
+  File "/usr/local/lib/python3.7/dist-packages/websockets/legacy/protocol.py", line 975, in read_frame
+    extensions=self.extensions,
+               │    └ []
+               └ <websockets.legacy.client.WebSocketClientProtocol object at 0x75e5dd10>
+
+  File "/usr/local/lib/python3.7/dist-packages/websockets/legacy/framing.py", line 55, in read
+    data = await reader(2)
+                 └ <bound method StreamReader.readexactly of <StreamReader limit=32768 exception=TimeoutError(110, 'Connection timed out') trans...
+
+  File "/usr/lib/python3.7/asyncio/streams.py", line 679, in readexactly
+    await self._wait_for_data('readexactly')
+          │    └ <function StreamReader._wait_for_data at 0x762192b8>
+          └ <StreamReader limit=32768 exception=TimeoutError(110, 'Connection timed out') transport=<_SelectorSocketTransport closed fd=8>>
+  File "/usr/lib/python3.7/asyncio/streams.py", line 473, in _wait_for_data
+    await self._waiter
+          │    └ None
+          └ <StreamReader limit=32768 exception=TimeoutError(110, 'Connection timed out') transport=<_SelectorSocketTransport closed fd=8>>
+  File "/usr/lib/python3.7/asyncio/selector_events.py", line 801, in _read_ready__data_received
+    data = self._sock.recv(self.max_size)
+           │    │          │    └ 262144
+           │    │          └ <_SelectorSocketTransport closed fd=8>
+           │    └ None
+           └ <_SelectorSocketTransport closed fd=8>
+
+TimeoutError: [Errno 110] Connection timed out
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "runAlexa.py", line 79, in <module>
+    client.handle_all(udp_client)
+    │      │          └ <sinric._sinricproudp.SinricProUdp object at 0x75e5de50>
+    │      └ <function SinricPro.handle_all at 0x75fe98e8>
+    └ <sinric._sinricpro.SinricPro object at 0x7673b6d0>
+
+  File "/root/.local/lib/python3.7/site-packages/sinric/_sinricpro.py", line 71, in handle_all
+    self.handle()
+    │    └ <function SinricPro.handle at 0x75fe96a8>
+    └ <sinric._sinricpro.SinricPro object at 0x7673b6d0>
+  File "/root/.local/lib/python3.7/site-packages/sinric/_sinricpro.py", line 52, in handle
+    asyncio.get_event_loop().run_until_complete(asyncio.wait(tasks))
+    │       │                                   │       │    └ [<Task pending coro=<SinricProSocket.receiveMessage() running at /root/.local/lib/python3.7/site-packages/sinric/_sinricproso...
+    │       │                                   │       └ <function wait at 0x762aad20>
+    │       │                                   └ <module 'asyncio' from '/usr/lib/python3.7/asyncio/__init__.py'>
+    │       └ <built-in function get_event_loop>
+    └ <module 'asyncio' from '/usr/lib/python3.7/asyncio/__init__.py'>
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 571, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x761fffa8>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 539, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x76201d20>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 1775, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x76281db0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x7547c430>(<Future finished result=None>)>
+  File "/usr/lib/python3.7/asyncio/events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x7547c430>(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x7547c430>(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x7547c430>(<Future finished result=None>)>
+> File "/root/.local/lib/python3.7/site-packages/sinric/_sinricprosocket.py", line 52, in receiveMessage
+    message = await connection.recv()
+                    │          └ <function WebSocketCommonProtocol.recv at 0x75e5a780>
+                    └ <websockets.legacy.client.WebSocketClientProtocol object at 0x75e5dd10>
+
+  File "/usr/local/lib/python3.7/dist-packages/websockets/legacy/protocol.py", line 421, in recv
+    await self.ensure_open()
+          │    └ <function WebSocketCommonProtocol.ensure_open at 0x75e5a930>
+          └ <websockets.legacy.client.WebSocketClientProtocol object at 0x75e5dd10>
+
+  File "/usr/local/lib/python3.7/dist-packages/websockets/legacy/protocol.py", line 726, in ensure_open
+    raise self.connection_closed_exc()
+          │    └ <function WebSocketCommonProtocol.connection_closed_exc at 0x75e5a8e8>
+          └ <websockets.legacy.client.WebSocketClientProtocol object at 0x75e5dd10>
+
+websockets.exceptions.ConnectionClosedError: code = 1006 (connection closed abnormally [internal]), no reason
+2022-01-29 20:10:40.731 | SUCCESS  | sinric._sinricprosocket:connect:41 - Connected :)
+2022-01-29 20:10:40.737 | SUCCESS  | sinric._sinricprosocket:connect:46 - Timestamp is in sync :)
+2022-01-29 20:12:47.137 | ERROR    | sinric._cbhandler:handleCallBacks:190 - Error : 'setColorTemperature'
+2022-01-29 20:20:54.767 | ERROR    | sinric._sinricpro:handle_all:73 - Keyboard Interrupt
+2022-01-29 20:20:58.239 | SUCCESS  | sinric._sinricprosocket:connect:41 - Connected :)
+2022-01-29 20:20:58.243 | SUCCESS  | sinric._sinricprosocket:connect:46 - Timestamp is in sync :)
+2022-02-05 17:50:04.150 | SUCCESS  | sinric._sinricprosocket:connect:41 - Connected :)
+2022-02-05 17:50:04.158 | SUCCESS  | sinric._sinricprosocket:connect:46 - Timestamp is in sync :)
+2022-02-05 17:52:08.144 | ERROR    | sinric._cbhandler:handleCallBacks:190 - Error : 'setColorTemperature'
+2022-02-05 17:52:20.289 | ERROR    | sinric._cbhandler:handleCallBacks:190 - Error : 'setColorTemperature'
+2022-02-05 17:52:42.869 | ERROR    | sinric._sinricpro:handle_all:73 - Keyboard Interrupt
+2022-02-05 17:52:45.233 | SUCCESS  | sinric._sinricprosocket:connect:41 - Connected :)
+2022-02-05 17:52:45.237 | SUCCESS  | sinric._sinricprosocket:connect:46 - Timestamp is in sync :)
+2022-02-05 18:06:12.899 | ERROR    | sinric._sinricpro:handle_all:73 - Keyboard Interrupt
+2022-02-05 18:06:15.303 | SUCCESS  | sinric._sinricprosocket:connect:41 - Connected :)
+2022-02-05 18:06:15.306 | SUCCESS  | sinric._sinricprosocket:connect:46 - Timestamp is in sync :)
+2022-02-05 18:14:04.047 | ERROR    | sinric._sinricpro:handle_all:73 - Keyboard Interrupt
+2022-02-05 18:14:06.512 | SUCCESS  | sinric._sinricprosocket:connect:41 - Connected :)
+2022-02-05 18:14:06.515 | SUCCESS  | sinric._sinricprosocket:connect:46 - Timestamp is in sync :)
+2022-02-05 18:15:08.529 | ERROR    | sinric._sinricpro:handle_all:73 - Keyboard Interrupt
+2022-02-05 18:18:45.508 | SUCCESS  | sinric._sinricprosocket:connect:41 - Connected :)
+2022-02-05 18:18:45.512 | SUCCESS  | sinric._sinricprosocket:connect:46 - Timestamp is in sync :)
+2022-02-05 18:19:30.179 | ERROR    | sinric._sinricpro:handle_all:73 - Keyboard Interrupt
+2022-02-05 18:20:18.014 | SUCCESS  | sinric._sinricprosocket:connect:41 - Connected :)
+2022-02-05 18:20:18.018 | SUCCESS  | sinric._sinricprosocket:connect:46 - Timestamp is in sync :)
+2022-02-05 18:20:40.180 | ERROR    | sinric._sinricpro:handle_all:73 - Keyboard Interrupt
+2022-02-05 18:21:20.390 | SUCCESS  | sinric._sinricprosocket:connect:41 - Connected :)
+2022-02-05 18:21:20.393 | SUCCESS  | sinric._sinricprosocket:connect:46 - Timestamp is in sync :)
+2022-02-05 18:30:42.970 | ERROR    | sinric._sinricpro:handle_all:73 - Keyboard Interrupt
+2022-02-05 18:30:51.895 | SUCCESS  | sinric._sinricprosocket:connect:41 - Connected :)
+2022-02-05 18:30:51.899 | SUCCESS  | sinric._sinricprosocket:connect:46 - Timestamp is in sync :)
+2022-02-05 18:31:45.887 | ERROR    | sinric._sinricpro:handle_all:73 - Keyboard Interrupt
