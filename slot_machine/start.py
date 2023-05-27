@@ -1,4 +1,4 @@
-import Mock.GPIO as GPIO
+import Rpi.GPIO as GPIO
 import time
 import pyautogui
 
