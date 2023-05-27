@@ -1,3 +1,3 @@
 #!/bin/bash
 
-chromium-browser --start-fullscreen /home/pi/Desktop/slot_machine/index.html
+chromium-browser --start-fullscreen ~/github/rasp_motel/slot_machine/index.html
