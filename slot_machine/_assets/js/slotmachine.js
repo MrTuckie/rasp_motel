@@ -88,7 +88,7 @@ function requestFullScreen() {
         if(this.options.premiosList  == null || this.options.beermansList  == null || this.options.beergirlsList  == null || this.options.locaisList  == null || this.options.tarefasList  == null)
         {
             console.log("Definindo lista de premios..")
-	    	var premios = ["premio-1.png", "premio-2.png", "premio-3.png", "premio-4.png", "premio-5.png"];
+	    	var premios = ["premio-1.png", "premio-2.png", "premio-3.png", "premio-4.png"];
             this.options.premiosList = premios;
             var tarefas = ["tarefa-1.png", "tarefa-2.png", "tarefa-3.png", "tarefa-4.png"];
             this.options.tarefasList = tarefas;            
@@ -192,6 +192,11 @@ function requestFullScreen() {
         // Detectando o click do teclado e verificando se está rodando
         $(document).keypress(function(event){
 
+            // if (event['charCode'] == 97){
+            //     premios.push('premio-5.png')
+            //     return;
+            // }
+
             if(((Date.now() - lastcall)) < 9000) {
                 return;
             }
@@ -246,21 +251,33 @@ function requestFullScreen() {
 			SlotMachine( 'YCSM-list-2' , 'YCSM-winner-2' , 6000 );
             SlotMachine( 'YCSM-list-3' , 'YCSM-winner-3' , 8000 );
 			
-			// Play Game Sound
-			var playSound = document.getElementById('YCSM-game');
-			
-			playSound.volume = 0.7;
-			
-			if(!theSound)
-			{
-				playSound.volume = 0;
-			}
-			
-			playSound.play();
 			
 			// Play Result Sound
 			setTimeout(function(){
 				
+				
+				var resultSound;
+			
+				/*if(isWinner)
+				{*/
+					resultSound	= document.getElementById('YCSM-win');
+					//thePlug._winEvent();
+				/*}
+				else
+				{
+					resultSound	= document.getElementById('YCSM-lose');
+					thePlug._loseEvent();
+				}*/
+				
+				resultSound.volume	= 1;
+				
+				if(!theSound)
+				{
+					resultSound.volume	= 0;
+				}
+				
+				resultSound.play();
+								
 				var resultSound;
 			
 				/*if(isWinner)
@@ -291,22 +308,7 @@ function requestFullScreen() {
 		});		
 	}
 
-	/* Acho que fica melhor sem, mais fluido para o rock
-	Plugin.prototype._winEvent = function ()
-	{
-		$('#YCSM-message').html('<img src="_assets/img/congrats.png">');
-		this._tryAgain();
-		slotMachine.openModal('YCSM-modal');
-	}
-	
-	Plugin.prototype._loseEvent = function ()
-	{
-		$('#YCSM-message').html('<img src="_assets/img/loser.png">');
-		this._tryAgain();
-		slotMachine.openModal('YCSM-modal');
-	}
-    */
-    
+
 	Plugin.prototype._tryAgain = function ()
 	{
         setTimeout(function(){
@@ -314,19 +316,20 @@ function requestFullScreen() {
         }, 3000);
 	}
 	
-	Plugin.prototype._reloadSlotMachine = function ()
-	{
-        console.log('Reloading...')
-		$("#YCSM-list-1").html('<div id="index-1"></div>');
-		$("#YCSM-list-2").html('<div id="index-2"></div>');
-        $("#YCSM-list-3").html('<div id="index-3"></div>');
+    // Essa porra é nunca chamada kkkkkkkkk vsf
+	// Plugin.prototype._reloadSlotMachine = function ()
+	// {
+    //     console.log('Reloading...')
+	// 	$("#YCSM-list-1").html('<div id="index-1"></div>');
+	// 	$("#YCSM-list-2").html('<div id="index-2"></div>');
+    //     $("#YCSM-list-3").html('<div id="index-3"></div>');
 
-		$("#YCSM-list-1").animate({scrollTop: $("#index-1").position().top}, 500, 'easeOutCirc');
-		$("#YCSM-list-2").animate({scrollTop: $("#index-2").position().top}, 500, 'easeOutCirc');
-        $("#YCSM-list-3").animate({scrollTop: $("#index-3").position().top}, 500, 'easeOutCirc');
-        this.LoadBoards();   
+	// 	$("#YCSM-list-1").animate({scrollTop: $("#index-1").position().top}, 500, 'easeOutCirc');
+	// 	$("#YCSM-list-2").animate({scrollTop: $("#index-2").position().top}, 500, 'easeOutCirc');
+    //     $("#YCSM-list-3").animate({scrollTop: $("#index-3").position().top}, 500, 'easeOutCirc');
+    //     this.LoadBoards();   
             
-	}
+	// }
 	
 	/* SlotMachine Method */
 	function SlotMachine( parentid , id , sec )
@@ -334,7 +337,11 @@ function requestFullScreen() {
         // sec é o tempo, eu acho
         // SlotMachine( 'YCSM-list-1' , 'YCSM-winner-1' , 4000 );
         console.log($("#" + id).position().top)
-		$("#" + parentid).animate({scrollTop: $("#" + id).position().top}, sec, 'easeOutCirc');
+		// $("#" + parentid).animate({scrollTop: $("#" + id).position().top}, sec, 'easeOutCirc');
+        rand_number = Math.floor(Math.random() * 10);
+        rand_foto = rand_number*274
+        $("#" + parentid).animate({scrollTop: $("#" + id).position().top - rand_foto}, sec, 'easeOutCirc');
+        // $("#" + parentid).animate({scrollTop: }, sec, 'easeOutCirc');
 	}
 	
     
